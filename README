@@ -10,27 +10,45 @@ Fraccion
     Se debe mostrar por la consola la fraccion en formato flotante
     Se debe comparar si dos fracciones son iguales con ==
     Se debe calcular el valor absoluto de una fraccion con el metodo abs
-    Se debe calcular el reciproco de una fraccion con el metodo reciproco (FAILED - 1)
-    Se debe calcular el opuesto de una fraccion con - (FAILED - 2)
+    Se debe calcular el reciproco de una fraccion con el metodo reciproco
+    Se debe calcular el opuesto de una fraccion con -
+    Se debe sumar dos fracciones con + y dar el resultado de forma reducida (FAILED - 1)
+    Se debe restar dos fracciones con - y dar el resultado de forma reducida (FAILED - 2)
+    Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida (FAILED - 3)
+    Se debe dividir dos fracciones con / y dar el resultado de forma reducida (FAILED - 4)
 
 Failures:
 
-  1) Fraccion Racional Se debe calcular el reciproco de una fraccion con el metodo reciproco
-     Failure/Error: @f1.reciproco.should eq("8/3")
+  1) Fraccion Racional Se debe sumar dos fracciones con + y dar el resultado de forma reducida
+     Failure/Error: (@f1+@f2).to_s.should eq("1/2")
      NoMethodError:
-       undefined method `reciproco' for #<Fraccion:0xb72595c4 @d=8, @n=3>
-     # ./spec/Frac_spec.rb:54
+       undefined method `+' for #<Fraccion:0xb730fa54 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:64
 
-  2) Fraccion Racional Se debe calcular el opuesto de una fraccion con -
-     Failure/Error: (-@f1).should eq("-3/8")
+  2) Fraccion Racional Se debe restar dos fracciones con - y dar el resultado de forma reducida
+     Failure/Error: (@f1-@f2).to_s.should eq("1/4")
      NoMethodError:
-       undefined method `-@' for #<Fraccion:0xb72571fc @d=8, @n=3>
-     # ./spec/Frac_spec.rb:59
+       undefined method `-' for #<Fraccion:0xb730e8e8 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:68
 
-Finished in 0.00411 seconds
-11 examples, 2 failures
+  3) Fraccion Racional Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida
+     Failure/Error: (@f1*@f2).to_s.should eq("3/64")
+     NoMethodError:
+       undefined method `*' for #<Fraccion:0xb730d7f4 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:72
+
+  4) Fraccion Racional Se debe dividir dos fracciones con / y dar el resultado de forma reducida
+     Failure/Error: (@f1/@f2).to_s.should eq("3/1")
+     NoMethodError:
+       undefined method `/' for #<Fraccion:0xb730c638 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:76
+
+Finished in 0.00493 seconds
+15 examples, 4 failures
 
 Failed examples:
 
-rspec ./spec/Frac_spec.rb:53 # Fraccion Racional Se debe calcular el reciproco de una fraccion con el metodo reciproco
-rspec ./spec/Frac_spec.rb:58 # Fraccion Racional Se debe calcular el opuesto de una fraccion con -
+rspec ./spec/Frac_spec.rb:63 # Fraccion Racional Se debe sumar dos fracciones con + y dar el resultado de forma reducida
+rspec ./spec/Frac_spec.rb:67 # Fraccion Racional Se debe restar dos fracciones con - y dar el resultado de forma reducida
+rspec ./spec/Frac_spec.rb:71 # Fraccion Racional Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida
+rspec ./spec/Frac_spec.rb:75 # Fraccion Racional Se debe dividir dos fracciones con / y dar el resultado de forma reducida

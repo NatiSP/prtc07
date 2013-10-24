@@ -3,7 +3,7 @@ require "lib/Fraccion.rb"
 describe Fraccion do
   before :each do
     @f1=Fraccion.new(3,8)
-    @f2=Fraccion.new(-1,8)
+    @f2=Fraccion.new(1,8)
   end 
 
 describe "Racional" do
