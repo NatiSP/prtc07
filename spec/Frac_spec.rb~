@@ -8,18 +8,18 @@ describe Fraccion do
 
 describe "Racional" do
     it "Existe un numerador" do
-      @f1.n.should_not be_nil
-      @f2.n.should_not be_nil
+      @f1.num.should_not be_nil
+      @f2.num.should_not be_nil
     end
     it "Existe un denominador" do
-      @f1.d.should_not be_nil
-      @f2.d.should_not be_nil
+      @f1.denom.should_not be_nil
+      @f2.denom.should_not be_nil
     end
     it "Debe de estar en su forma reducida" do
-      @f1.n.should eq(3)
-      @f1.d.should eq(8)
-      @f2.n.should eq(1)
-      @f2.d.should eq(8)
+      @f1.num.should eq(3)
+      @f1.denom.should eq(8)
+      @f2.num.should eq(1)
+      @f2.denom.should eq(8)
       
     end
     it "Se debe invocar al metodo num() para obtener el numerador" do

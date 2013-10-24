@@ -1,16 +1,30 @@
-$ rake doc
-rspec -I. spec/Frac_spec.rb --format documentation
-/home/dani/LPP/prct06/spec/Frac_spec.rb:3: uninitialized constant Fraccion (NameError)
-	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/configuration.rb:896:in `load'
-	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/configuration.rb:896:in `load_spec_files'
-	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/configuration.rb:896:in `each'
-	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/configuration.rb:896:in `load_spec_files'
-	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/command_line.rb:22:in `run'
-	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/runner.rb:80:in `run'
-	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/runner.rb:17:in `autorun'
-	from /usr/local/bin/rspec:19
-rake aborted!
-Command failed with status (1): [rspec -I. spec/Frac_spec.rb --format docum...]
 
-Tasks: TOP => doc
-(See full trace by running task with --trace)
+Fraccion
+  Racional
+    Existe un numerador
+    Existe un denominador
+    Debe de estar en su forma reducida
+    Se debe invocar al metodo num() para obtener el numerador (FAILED - 1)
+    Se debe invocar al metodo denom() para obtener el denominador (FAILED - 2)
+
+Failures:
+
+  1) Fraccion Racional Se debe invocar al metodo num() para obtener el numerador
+     Failure/Error: @f1.num().should eq(@f1.n)
+     NoMethodError:
+       undefined method `num' for #<Fraccion:0xb7349880 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:26
+
+  2) Fraccion Racional Se debe invocar al metodo denom() para obtener el denominador
+     Failure/Error: @f1.denom().should eq(@f1.d)
+     NoMethodError:
+       undefined method `denom' for #<Fraccion:0xb7347328 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:30
+
+Finished in 0.00818 seconds
+5 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/Frac_spec.rb:25 # Fraccion Racional Se debe invocar al metodo num() para obtener el numerador
+rspec ./spec/Frac_spec.rb:29 # Fraccion Racional Se debe invocar al metodo denom() para obtener el denominador
