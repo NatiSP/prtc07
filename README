@@ -6,30 +6,22 @@ Fraccion
     Debe de estar en su forma reducida
     Se debe invocar al metodo num() para obtener el numerador
     Se debe invocar al metodo denom() para obtener el denominador
-    Se debe mostrar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador (FAILED - 1)
-    Se debe mostrar por la consola la fraccion en formato flotante (FAILED - 2)
+    Se debe mostrar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador
+    Se debe mostrar por la consola la fraccion en formato flotante
+    Se debe comparar si dos fracciones son iguales con ==
+    Se debe calcular el valor absoluto de una fraccion con el metodo abs (FAILED - 1)
 
 Failures:
 
-  1) Fraccion Racional Se debe mostrar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador
-     Failure/Error: @f1.to_s().should eq("3/8")
-       
-       expected: "3/8"
-            got: "#<Fraccion:0xb72e61cc>"
-       
-       (compared using ==)
-     # ./spec/Frac_spec.rb:34
-
-  2) Fraccion Racional Se debe mostrar por la consola la fraccion en formato flotante
-     Failure/Error: @f1.float().should eq(0.375)
+  1) Fraccion Racional Se debe calcular el valor absoluto de una fraccion con el metodo abs
+     Failure/Error: @f1.abs.should eq("3/8")
      NoMethodError:
-       undefined method `float' for #<Fraccion:0xb72e4bd8 @d=8, @n=3>
-     # ./spec/Frac_spec.rb:38
+       undefined method `abs' for #<Fraccion:0xb729455c @d=8, @n=3>
+     # ./spec/Frac_spec.rb:49
 
-Finished in 0.00332 seconds
-7 examples, 2 failures
+Finished in 0.00367 seconds
+9 examples, 1 failure
 
 Failed examples:
 
-rspec ./spec/Frac_spec.rb:33 # Fraccion Racional Se debe mostrar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador
-rspec ./spec/Frac_spec.rb:37 # Fraccion Racional Se debe mostrar por la consola la fraccion en formato flotante
+rspec ./spec/Frac_spec.rb:48 # Fraccion Racional Se debe calcular el valor absoluto de una fraccion con el metodo abs

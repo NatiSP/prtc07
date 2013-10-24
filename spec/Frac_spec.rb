@@ -38,5 +38,17 @@ describe "Racional" do
       @f1.float().should eq(0.375)
       @f2.float().should eq(0.125)
     end
+    
+    it "Se debe comparar si dos fracciones son iguales con ==" do
+      (@f1.num==@f2.num and @f1.denom==@f2.denom).should eq(false)
+      @f1.to_s.should eq(Fraccion.new(6, 16).to_s)
+      @f2.to_s.should eq(Fraccion.new(2, 16).to_s)
+    end
+    
+    it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
+      @f1.abs.should eq("3/8")
+      @f2.abs.should eq("1/8")
+    end
+    
   end
 end

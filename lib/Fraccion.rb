@@ -25,5 +25,23 @@ class Fraccion
     return @d
   end
   
+  def to_s
+    #puts "#{@n}/#{@d}"
+    "#{@n}/#{@d}"
+  end
   
+  def float
+    #puts @n.to_f/@d.to_f
+    return (@n.to_f/@d.to_f)
+  end
+  
+  def ==(other)
+    if @n == other.n and @d == other.d
+	#puts "true"
+        return true
+    else
+	#puts "false"
+        return false
+    end
+  end
 end
