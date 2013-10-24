@@ -80,5 +80,21 @@ describe "Racional" do
       (@f1%@f2).to_s.should eq("0")
     end
     
+    it "Se debe de poder comprobar si una fraccion es menor que otra" do
+      (@f1<@f2).should eq(false)
+    end
+    
+    it "Se debe de poder comprobar si una fraccion es mayor que otra" do
+      (@f1>@f2).should eq(true)
+    end
+    
+    it "Se debe de poder comprobar si una fraccion es menor o igual que otra" do
+      (@f1<=@f2).should eq(false)
+    end
+    
+    it "Se debe de poder comprobar si una fraccion es mayor o igual que otra" do
+      (@f1>=@f2).should eq(true)
+    end
+    
   end
 end

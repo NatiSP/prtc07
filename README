@@ -16,19 +16,44 @@ Fraccion
     Se debe restar dos fracciones con - y dar el resultado de forma reducida
     Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida
     Se debe dividir dos fracciones con / y dar el resultado de forma reducida
-    Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida (FAILED - 1)
+    Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida
+    Se debe de poder comprobar si una fraccion es menor que otra (FAILED - 1)
+    Se debe de poder comprobar si una fraccion es mayor que otra (FAILED - 2)
+    Se debe de poder comprobar si una fraccion es menor o igual que otra (FAILED - 3)
+    Se debe de poder comprobar si una fraccion es mayor o igual que otra (FAILED - 4)
 
 Failures:
 
-  1) Fraccion Racional Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida
-     Failure/Error: (@f1%@f2).to_s.should eq("0")
+  1) Fraccion Racional Se debe de poder comprobar si una fraccion es menor que otra
+     Failure/Error: (@f1<@f2).should eq(false)
      NoMethodError:
-       undefined method `%' for #<Fraccion:0xb72c78f8 @d=8, @n=3>
-     # ./spec/Frac_spec.rb:80
+       undefined method `<' for #<Fraccion:0xb7290808 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:84
 
-Finished in 0.00509 seconds
-16 examples, 1 failure
+  2) Fraccion Racional Se debe de poder comprobar si una fraccion es mayor que otra
+     Failure/Error: (@f1>@f2).should eq(true)
+     NoMethodError:
+       undefined method `>' for #<Fraccion:0xb728bb8c @d=8, @n=3>
+     # ./spec/Frac_spec.rb:88
+
+  3) Fraccion Racional Se debe de poder comprobar si una fraccion es menor o igual que otra
+     Failure/Error: (@f1<=@f2).should eq(false)
+     NoMethodError:
+       undefined method `<=' for #<Fraccion:0xb7287744 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:92
+
+  4) Fraccion Racional Se debe de poder comprobar si una fraccion es mayor o igual que otra
+     Failure/Error: (@f1>=@f2).should eq(true)
+     NoMethodError:
+       undefined method `>=' for #<Fraccion:0xb7285b10 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:96
+
+Finished in 0.00595 seconds
+20 examples, 4 failures
 
 Failed examples:
 
-rspec ./spec/Frac_spec.rb:79 # Fraccion Racional Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida
+rspec ./spec/Frac_spec.rb:83 # Fraccion Racional Se debe de poder comprobar si una fraccion es menor que otra
+rspec ./spec/Frac_spec.rb:87 # Fraccion Racional Se debe de poder comprobar si una fraccion es mayor que otra
+rspec ./spec/Frac_spec.rb:91 # Fraccion Racional Se debe de poder comprobar si una fraccion es menor o igual que otra
+rspec ./spec/Frac_spec.rb:95 # Fraccion Racional Se debe de poder comprobar si una fraccion es mayor o igual que otra

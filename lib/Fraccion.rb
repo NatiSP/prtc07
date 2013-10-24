@@ -75,4 +75,8 @@ class Fraccion
     Fraccion.new(@n*other.d, @d*other.n).to_s
   end
   
+  def %(other)
+    return (@n*other.d) % (@d*other.n)
+  end
+  
 end

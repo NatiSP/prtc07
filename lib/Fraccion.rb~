@@ -59,4 +59,33 @@ class Fraccion
     Fraccion.new(-@n, @d).to_s
   end
   
+  def +(other)
+    Fraccion.new(@n+other.n, @d).to_s
+  end
+	
+  def -(other)
+    Fraccion.new(@n-other.n, @d).to_s	
+  end
+  
+  def *(other)
+    Fraccion.new(@n*other.n, @d*other.d).to_s
+  end
+  
+  def /(other)
+    Fraccion.new(@n*other.d, @d*other.n).to_s
+  end
+  
+  def %(other)
+    return (@n*other.d) % (@d*other.n)
+  end
+  
+  def <(other)
+     a=@n.to_f/@d.to_f
+     b=((other.n).to_f)/((other.d).to_f)
+    if a < b
+        return true
+    else
+        return false
+    end
+  end
 end
