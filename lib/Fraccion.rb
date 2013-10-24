@@ -44,4 +44,8 @@ class Fraccion
         return false
     end
   end
+  
+  def abs
+    Fraccion.new(@n.abs,@d.abs).to_s
+  end
 end

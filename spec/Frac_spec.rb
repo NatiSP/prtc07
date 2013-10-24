@@ -50,5 +50,15 @@ describe "Racional" do
       @f2.abs.should eq("1/8")
     end
     
+    it "Se debe calcular el reciproco de una fraccion con el metodo reciproco" do
+      @f1.reciproco.should eq("8/3")
+      @f2.reciproco.should eq("8/1")
+    end
+    
+    it "Se debe calcular el opuesto de una fraccion con -" do
+      (-@f1).should eq("-3/8")
+      (-@f2).should eq("-1/8")
+    end
+    
   end
 end

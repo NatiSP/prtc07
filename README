@@ -9,19 +9,28 @@ Fraccion
     Se debe mostrar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador
     Se debe mostrar por la consola la fraccion en formato flotante
     Se debe comparar si dos fracciones son iguales con ==
-    Se debe calcular el valor absoluto de una fraccion con el metodo abs (FAILED - 1)
+    Se debe calcular el valor absoluto de una fraccion con el metodo abs
+    Se debe calcular el reciproco de una fraccion con el metodo reciproco (FAILED - 1)
+    Se debe calcular el opuesto de una fraccion con - (FAILED - 2)
 
 Failures:
 
-  1) Fraccion Racional Se debe calcular el valor absoluto de una fraccion con el metodo abs
-     Failure/Error: @f1.abs.should eq("3/8")
+  1) Fraccion Racional Se debe calcular el reciproco de una fraccion con el metodo reciproco
+     Failure/Error: @f1.reciproco.should eq("8/3")
      NoMethodError:
-       undefined method `abs' for #<Fraccion:0xb729455c @d=8, @n=3>
-     # ./spec/Frac_spec.rb:49
+       undefined method `reciproco' for #<Fraccion:0xb72595c4 @d=8, @n=3>
+     # ./spec/Frac_spec.rb:54
 
-Finished in 0.00367 seconds
-9 examples, 1 failure
+  2) Fraccion Racional Se debe calcular el opuesto de una fraccion con -
+     Failure/Error: (-@f1).should eq("-3/8")
+     NoMethodError:
+       undefined method `-@' for #<Fraccion:0xb72571fc @d=8, @n=3>
+     # ./spec/Frac_spec.rb:59
+
+Finished in 0.00411 seconds
+11 examples, 2 failures
 
 Failed examples:
 
-rspec ./spec/Frac_spec.rb:48 # Fraccion Racional Se debe calcular el valor absoluto de una fraccion con el metodo abs
+rspec ./spec/Frac_spec.rb:53 # Fraccion Racional Se debe calcular el reciproco de una fraccion con el metodo reciproco
+rspec ./spec/Frac_spec.rb:58 # Fraccion Racional Se debe calcular el opuesto de una fraccion con -
