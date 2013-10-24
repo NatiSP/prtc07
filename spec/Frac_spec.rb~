@@ -60,5 +60,25 @@ describe "Racional" do
       (-@f2).should eq("-1/8")
     end
     
+    it "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
+      (@f1+@f2).to_s.should eq("1/2")
+    end
+    
+    it "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
+      (@f1-@f2).to_s.should eq("1/4")
+    end
+    
+    it "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida" do
+      (@f1*@f2).to_s.should eq("3/64")
+    end
+    
+    it "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
+      (@f1/@f2).to_s.should eq("3/1")
+    end
+    
+    it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
+      
+    end
+    
   end
 end

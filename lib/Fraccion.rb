@@ -58,4 +58,21 @@ class Fraccion
   def -@
     Fraccion.new(-@n, @d).to_s
   end
+  
+  def +(other)
+    Fraccion.new(@n+other.n, @d).to_s
+  end
+	
+  def -(other)
+    Fraccion.new(@n-other.n, @d).to_s	
+  end
+  
+  def *(other)
+    Fraccion.new(@n*other.n, @d*other.d).to_s
+  end
+  
+  def /(other)
+    Fraccion.new(@n*other.d, @d*other.n).to_s
+  end
+  
 end

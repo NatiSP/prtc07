@@ -48,4 +48,15 @@ class Fraccion
   def abs
     Fraccion.new(@n.abs,@d.abs).to_s
   end
+  
+  def reciproco
+    nn = @d
+    dd = @n
+  	Fraccion.new(nn, dd).to_s
+  end
+  
+  def -@
+    Fraccion.new(-@n, @d).to_s
+  end
+  
 end

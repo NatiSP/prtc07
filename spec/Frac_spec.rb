@@ -76,5 +76,9 @@ describe "Racional" do
       (@f1/@f2).to_s.should eq("3/1")
     end
     
+    it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
+      (@f1%@f2).to_s.should eq("0")
+    end
+    
   end
 end
