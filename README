@@ -1,0 +1,16 @@
+$ rake doc
+rspec -I. spec/Frac_spec.rb --format documentation
+/home/dani/LPP/prct06/spec/Frac_spec.rb:3: uninitialized constant Fraccion (NameError)
+	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/configuration.rb:896:in `load'
+	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/configuration.rb:896:in `each'
+	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/command_line.rb:22:in `run'
+	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/runner.rb:80:in `run'
+	from /var/lib/gems/1.8/gems/rspec-core-2.14.6/lib/rspec/core/runner.rb:17:in `autorun'
+	from /usr/local/bin/rspec:19
+rake aborted!
+Command failed with status (1): [rspec -I. spec/Frac_spec.rb --format docum...]
+
+Tasks: TOP => doc
+(See full trace by running task with --trace)
