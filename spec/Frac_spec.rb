@@ -7,26 +7,26 @@ describe Fraccion do
   end 
 
 describe "Racional" do
-    it "Existe un numerador" do
-      @f1.num().should_not be_nil
+    it "Existe un numerador" do #Comprueba si existe un numerador diciendo que el valor debe no ser nil
+      @f1.num().should_not be_nil 
       @f2.num().should_not be_nil
     end
     it "Existe un denominador" do
-      @f1.denom().should_not be_nil
+      @f1.denom().should_not be_nil #Comprueba si existe un denominador diciendo que el valor debe no ser nil
       @f2.denom().should_not be_nil
     end
-    it "Debe de estar en su forma reducida" do
+    it "Debe de estar en su forma reducida" do #Si f2, por ejemplo, fuera 2/16, el numerador y el denominador deben valer 1 y 8 respectivamente, eso es lo que se comprueba
       @f1.num().should eq(3)
       @f1.denom().should eq(8)
       @f2.num().should eq(1)
       @f2.denom().should eq(8)
       
     end
-    it "Se debe invocar al metodo num() para obtener el numerador" do
+    it "Se debe invocar al metodo num() para obtener el numerador" do #Se hace la invocación al método numerador para comprobar que lo que se devuelve es la variable n
       @f1.num().should eq(@f1.n)
       @f2.num().should eq(@f2.n)
     end
-    it "Se debe invocar al metodo denom() para obtener el denominador" do
+    it "Se debe invocar al metodo denom() para obtener el denominador" do #Se hace la invocación al método denominador para comprobar que lo que se devuelve es la variable d
       @f1.denom().should eq(@f1.d)
       @f2.denom().should eq(@f2.d)
     end
