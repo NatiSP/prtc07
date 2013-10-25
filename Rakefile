@@ -12,5 +12,5 @@ end
 
 desc "Ejecutar con formato html"
 task :thtml do
-  sh "rspec -I. spec/Frac_spec.rb format:html"
+  sh "rspec -I. spec/Frac_spec.rb --format html"
 end
