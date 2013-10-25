@@ -4,9 +4,12 @@ describe Fraccion do
   before :each do
     @f1=Fraccion.new(3,8)
     @f2=Fraccion.new(1,8)
+    @f3=Fraccion.new(1,3)
+    @f4=Fraccion.new(1,2)
   end 
 
-describe "Racional" do
+describe "Racional" do #Cambiar Racional por grupos definidos
+  
     it "Existe un numerador" do #Comprueba si existe un numerador diciendo que el valor debe no ser nil
       @f1.num().should_not be_nil 
       @f2.num().should_not be_nil
@@ -45,19 +48,19 @@ describe "Racional" do
       @f2.to_s.should eq(Fraccion.new(2, 16).to_s)
     end
     
-    it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
+    it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do #Usar el ==
       @f1.abs.should eq("3/8")
       @f2.abs.should eq("1/8")
     end
     
-    it "Se debe calcular el reciproco de una fraccion con el metodo reciproco" do
+    it "Se debe calcular el reciproco de una fraccion con el metodo reciproco" do #Usar el ==
       @f1.reciproco.should eq("8/3")
       @f2.reciproco.should eq("8/1")
     end
     
     it "Se debe calcular el opuesto de una fraccion con -" do
-      (-@f1).should eq("-3/8")
-      (-@f2).should eq("-1/8")
+      (-@f1).to_s.should eq("-3/8")
+      (-@f2).to_s.should eq("-1/8")
     end
     
     it "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
@@ -97,4 +100,16 @@ describe "Racional" do
     end
     
   end
+
+describe "Modificacion" do  
+
+  it "Operaciones realizadas de manera conjunta" do
+    neutro=Fraccion.new(0,1)
+    if (@f3%@f4) == "0"
+      puts neutro.to_s
+    else
+      (-@f3*@f4).abs.to_s.should eq("1/6")
+    end  
+end
+end  
 end

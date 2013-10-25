@@ -56,7 +56,7 @@ class Fraccion
   end
   
   def -@ #devuelve el negativo de la fracción
-    Fraccion.new(-@n, @d).to_s
+    Fraccion.new(-@n, @d)
   end
   
   def +(other) #Suma 2 fracciones
@@ -68,7 +68,7 @@ class Fraccion
   end
   
   def *(other)#Multiplica 2 fracciones
-    Fraccion.new(@n*other.n, @d*other.d).to_s
+    Fraccion.new(@n*other.n, @d*other.d)
   end
   
   def /(other) #Divide 2 fracciones
