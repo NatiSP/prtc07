@@ -15,27 +15,27 @@ class Fraccion
     
   end
   
-  def num()
+  def num() #Devuelve el numerador
     #puts @n
     return @n
   end
   
-  def denom()
+  def denom() #Devuelve el denominador
     #puts @d
     return @d
   end
   
-  def to_s
+  def to_s #Devuelve una cadena string con la fracción minimizada
     #puts "#{@n}/#{@d}"
     "#{@n}/#{@d}"
   end
   
-  def float
+  def float #Devuelve el resultado en formato flotante
     #puts @n.to_f/@d.to_f
     return (@n.to_f/@d.to_f)
   end
   
-  def ==(other)
+  def ==(other) #Permite saber si dos fracciones son iguales
     if @n == other.n and @d == other.d
 	#puts "true"
         return true
@@ -45,33 +45,33 @@ class Fraccion
     end
   end
   
-  def abs
+  def abs #Devuelve la fracción en su valor absoluto
     Fraccion.new(@n.abs,@d.abs).to_s
   end
   
-  def reciproco
+  def reciproco #devuelve la fracción de forma recíproca, esto es, a/b => b/a
     nn = @d
     dd = @n
-  	Fraccion.new(nn, dd).to_s
+  	Fraccion.new(@d, @n).to_s
   end
   
-  def -@
+  def -@ #devuelve el negativo de la fracción
     Fraccion.new(-@n, @d).to_s
   end
   
-  def +(other)
+  def +(other) #Suma 2 fracciones
     Fraccion.new(@n+other.n, @d).to_s
   end
 	
-  def -(other)
+  def -(other)#Resta 2 fracciones
     Fraccion.new(@n-other.n, @d).to_s	
   end
   
-  def *(other)
+  def *(other)#Multiplica 2 fracciones
     Fraccion.new(@n*other.n, @d*other.d).to_s
   end
   
-  def /(other)
+  def /(other) #Divide 2 fracciones
     Fraccion.new(@n*other.d, @d*other.n).to_s
   end
   
@@ -79,7 +79,7 @@ class Fraccion
     return (@n*other.d) % (@d*other.n)
   end
   
-  def <(other)
+  def <(other) #Permite comprobar si una fracción es menor que otra
      a=@n.to_f/@d.to_f
      b=((other.n).to_f)/((other.d).to_f)
     if a < b
@@ -89,7 +89,7 @@ class Fraccion
     end
   end
   
-  def >(other)
+  def >(other)#Permite comprobar si una fracción es mayor que otra
      a=@n.to_f/@d.to_f
      b=((other.n).to_f)/((other.d).to_f)
     if a > b
@@ -99,7 +99,7 @@ class Fraccion
     end
   end
   
-  def >=(other)
+  def >=(other)#Permite comprobar si una fracción es mayor o igual que otra
      a=@n.to_f/@d.to_f
      b=((other.n).to_f)/((other.d).to_f)
     if a >= b
@@ -109,7 +109,7 @@ class Fraccion
     end
   end
   
-  def <=(other)
+  def <=(other)#Permite comprobar si una fracción es menor o igual que otra
      a=@n.to_f/@d.to_f
      b=((other.n).to_f)/((other.d).to_f)
     if a <= b
