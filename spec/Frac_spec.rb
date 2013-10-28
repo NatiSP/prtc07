@@ -8,8 +8,7 @@ describe Fraccion do
     @f4=Fraccion.new(1,2)
   end 
 
-describe "Racional" do #Cambiar Racional por grupos definidos
-  
+describe "Comprobaciones" do  
     it "Existe un numerador" do #Comprueba si existe un numerador diciendo que el valor debe no ser nil
       @f1.num().should_not be_nil 
       @f2.num().should_not be_nil
@@ -22,8 +21,7 @@ describe "Racional" do #Cambiar Racional por grupos definidos
       @f1.num().should eq(3)
       @f1.denom().should eq(8)
       @f2.num().should eq(1)
-      @f2.denom().should eq(8)
-      
+      @f2.denom().should eq(8)      
     end
     it "Se debe invocar al metodo num() para obtener el numerador" do #Se hace la invocación al método numerador para comprobar que lo que se devuelve es la variable n
       @f1.num().should eq(@f1.n)
@@ -42,13 +40,17 @@ describe "Racional" do #Cambiar Racional por grupos definidos
       @f2.float().should eq(0.125)
     end
     
+end
+describe "Comprobar igualacion" do    
     it "Se debe comparar si dos fracciones son iguales con ==" do
       (@f1.num==@f2.num and @f1.denom==@f2.denom).should eq(false)
       @f1.to_s.should eq(Fraccion.new(6, 16).to_s)
       @f2.to_s.should eq(Fraccion.new(2, 16).to_s)
     end
-    
-    it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do #Usar el ==
+end
+describe "abs, recíproco y opuesto" do
+
+it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do #Usar el ==
       @f1.abs.should eq("3/8")
       @f2.abs.should eq("1/8")
     end
@@ -62,7 +64,8 @@ describe "Racional" do #Cambiar Racional por grupos definidos
       (-@f1).to_s.should eq("-3/8")
       (-@f2).to_s.should eq("-1/8")
     end
-    
+end    
+describe "Cálculos" do    
     it "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
       (@f1+@f2).to_s.should eq("1/2")
     end
@@ -82,7 +85,8 @@ describe "Racional" do #Cambiar Racional por grupos definidos
     it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
       (@f1%@f2).to_s.should eq("0")
     end
-    
+end    
+describe "Comparadores" do    
     it "Se debe de poder comprobar si una fraccion es menor que otra" do
       (@f1<@f2).should eq(false)
     end
@@ -100,7 +104,6 @@ describe "Racional" do #Cambiar Racional por grupos definidos
     end
     
   end
-
 describe "Modificacion" do  
 
   it "Operaciones realizadas de manera conjunta" do
@@ -112,4 +115,5 @@ describe "Modificacion" do
     end  
 end
 end  
+
 end
