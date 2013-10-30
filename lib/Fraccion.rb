@@ -9,6 +9,7 @@ end
 
 class Fraccion
   attr_reader :n, :d
+  include Comparable
   def initialize(n,d)
     @n = n/gcd(n,d)
     @d = d/gcd(n,d)
@@ -79,6 +80,20 @@ class Fraccion
     return (@n*other.d) % (@d*other.n)
   end
   
+  def <=>(other)
+    if ((@n == other.num) && (@d == other.denom))
+      return 0
+    end
+    if ((@n * other.denom) < (@d * other.num))
+      return -1
+    end
+    if ((@n * other.denom) > (@d * other.num))
+      return 1
+    end
+  end
+  
+=begin
+
   def <(other) #Permite comprobar si una fracción es menor que otra
      a=@n.to_f/@d.to_f
      b=((other.n).to_f)/((other.d).to_f)
@@ -118,4 +133,7 @@ class Fraccion
         return false
     end
   end
+  
+=end
+
 end

@@ -68,7 +68,7 @@ class Fraccion
   end
   
   def *(other)#Multiplica 2 fracciones
-    Fraccion.new(@n*other.n, @d*other.d).to_s
+    Fraccion.new(@n*other.n, @d*other.d)
   end
   
   def /(other) #Divide 2 fracciones
