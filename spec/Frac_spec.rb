@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require "lib/Fraccion.rb"
 
 describe Fraccion do

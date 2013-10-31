@@ -113,7 +113,7 @@ describe "Modificacion" do
     else
       (-@f3*@f4).abs.to_s.should eq("1/6")
     end  
-
+end
 end  
 
 end
